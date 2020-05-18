@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forcasting </title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightblue;
+        }
+        h1{
+            width: 80%;
+            text-align: center;
+            font-size: 50px;
+            margin :10px auto;
+            text-transform: capitalize;
+            color:maroon;
+            background-color: navajowhite;
+        }
+
+        .search{
+           
+            margin: 100px;
+            margin-left: 200px;
+        }
+        
+     .search   input[type="text"]{
+             max-width: 60%;
+            width: 60%;
+            height: 50px;
+            padding: 0px 10px;
+            border-radius: 30px;
+            font-size: 20px;
+        
+        }
+        .search   input[type="submit"]{
+            width: 10%;
+            background-color: lightsalmon;
+            color:black;
+            padding: 5px;
+            border: none;
+            line-height: 30px;
+            margin-left: 15px;
+        }
+        
+     .search input[type="text"]:focus{
+         background-color: black;
+         color: white;
+        
+     }
+     .search input[type="submit"]:hover{
+        background-color: green;
+        color: white;
+     }
+
+
+
+
+        .result{
+            display: none;
+            background-color: rgba(0,0,0,0.8);
+           
+            margin: 40px auto;
+           
+            padding: 20px;
+            width: 50%;
+            height: auto;
+            
+        }
+        .tempp1, .tempp2, .tempp3, .tempp4{
+            display: flex;
+            padding: 10px;
+            font-size: 20px;
+            color:lavender;
+
+        }
+      
+        .temperature, .city{
+            color: lavender;
+            padding-left: 5px;
+            padding-bottom: 10px;
+            font-size: 20px;
+
+        }
+        .desc{
+            margin: 10px auto;
+            width: 50%;
+            background-color:ivory;
+            text-align: center;
+
+            color: black;
+            font-size: 35px;
+        }
+     
+    </style>
+</head>
+<body>
+    <h1>Weather Update</h1>
+<div class="container">
+    <div class="search">
+    <form id="form-main">
+    <input type="text" id="txtt" placeholder="Enter city">
+    <input type="submit" id="but" value="Search">
+    </form>
+</div>
+<div class="result" id="res">
+    <div class="tempp1">
+        <div class="temp">Minimum Temperature:</div>
+        <div class="temperature" id = "temp-min"></div>
+    </div>
+    <div class="tempp2">
+        <div class="temp"> Temperature:</div>
+    <div class="temperature" id = "temp">
+        
+    </div></div>
+    <div class="tempp3">
+        <div class="temp">Maximum Temperature:</div>
+        <div class="temperature" id = "temp-max"></div>
+    </div>
+   
+    <div class="tempp4">    
+        <div class="temp">City:</div>
+        <div class="city" id="city"></div>
+    </div>
+    <div class="desc" id="desc"><div class="temp"></div></div>
+</div>
+
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
